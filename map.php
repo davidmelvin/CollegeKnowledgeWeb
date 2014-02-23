@@ -22,7 +22,7 @@
       
       <div id="searchPanel">
     <input id="address" type="textbox" value="Enter a City">
-    <input type="button" value="Find Colleges!" onclick="codeAddress()">
+    <input type="button" value="Find Colleges!" onclick="zoomOnLocation()">
   </div>
     <div id="map-canvas"/>
    
