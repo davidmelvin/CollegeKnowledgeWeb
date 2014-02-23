@@ -2,19 +2,15 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas { height: 100% }
-    </style>
+
     <link rel="stylesheet" href="css/base.css">
-     <link rel="stylesheet" href="css/skeleton.css">
-      <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
       <script <script type="text/javascript"
       src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?sensor=false">
-      //src="http://maps.googleapis.com/maps/api/js?sensor=false"
     </script>
     <script type="text/javascript" src="js/loadmap.js"></script>
   </head>
@@ -22,13 +18,14 @@
       <?php
         $lat = $_GET['lat'];
         $long = $_GET['long'];
-       // echo "LOL";
       ?>
-      <script type="text/javascript">
-      </script>
-      <input type="text"/>
+      
+      <div id="searchPanel">
+    <input id="address" type="textbox" value="Enter a City">
+    <input type="button" value="Find Colleges!" onclick="codeAddress()">
+  </div>
     <div id="map-canvas"/>
-
+   
 
   </body>
   <script type="text/javascript" src="js/loadmap.js">
