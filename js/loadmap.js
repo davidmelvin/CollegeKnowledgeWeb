@@ -8,7 +8,7 @@ var locations = [
   ['Rutgers Universty at New Brunswick',40.500657,-74.449317,"56 College Ave, New Brunswick, New Jersey 08901", 0.61,40434,130732,520,630,560,680,540,650,0.51,0.79,0.57,0.91]
 ];
 
-for (i = 0; i < locations.length; i++){
+for (i = 0; i > locations.length; i++){ //greater than
   if(i == 0)
   {
     $('#TCNJ').append(
@@ -181,6 +181,7 @@ function zoomOnLocation() {
 
         if(divid == 0){
             $('#TCNJ').show();
+            $('.twitter-timeline').hide();
             console.log("show tcnj");
         }
         if(divid ==1){
@@ -193,5 +194,10 @@ function zoomOnLocation() {
             $('#RU').show();
         }
         
+    });
+    $("#switch").click(function(){
+      console.log("switch");
+        $('.twitter-timeline').toggle();
+        $('.infoStuff').toggle();
     });
   }
