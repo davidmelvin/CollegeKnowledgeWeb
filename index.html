@@ -2,33 +2,57 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
+    <meta charset="utf-8" />
+    <title>CollegeKnowledge</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/style.css">
-      <script <script type="text/javascript"
-      src="js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
-    <script type="text/javascript" src="js/loadmap.js"></script>
+    
+
+ 
   </head>
   <body>
       
       
     <div id="searchPanel">
-    <input id="address" type="textbox" value="Enter a City" onkeydown="if (event.keyCode == 13) document.getElementById('find').click()">
+    <input id="address" type="textbox" value="Woodbridge, NJ" onkeydown="if (event.keyCode == 13) document.getElementById('find').click()">
     <input id="radius" type="textbox" value=15>
     <input id="find" type="button" value="Find Colleges!" onclick="zoomOnLocation()">
   </div>
-  <div id="sidebar">
-      
+  <div id='sidebar'>
+
+  <div id="sidebarHide">
+      <div id="TCNJ">
+        <input type="button" value="Back to College List">
+        <input type="button" value="Show Tweets">
+
+      <a class="twitter-timeline" href="https://twitter.com/davidmelvinjr" data-widget-id="437598626718556160">Tweets by @davidmelvinjr</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+      <div id="Rider">
+        <a href="https://twitter.com/intent/tweet?button_hashtag=Rider&text=On%20a%20tour!" class="twitter-hashtag-button" data-size="large" data-related="davidmelvinjr">Tweet #Rider</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+      <div id="Princeton">
+        <a href="https://twitter.com/intent/tweet?button_hashtag=Princeton&text=On%20a%20tour!" class="twitter-hashtag-button" data-size="large" data-related="davidmelvinjr">Tweet #Princeton</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+      <div id="RU">
+        <a href="https://twitter.com/intent/tweet?button_hashtag=RU&text=On%20a%20tour!" class="twitter-hashtag-button" data-size="large" data-related="davidmelvinjr">Tweet #RU</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+   </div>
   </div>
   <div id="map-canvas"/>
-   
-
-  </body>
-  <script type="text/javascript" src="js/loadmap.js"></script>
-    <script type="text/javascript" src="js/sidebar.js"></script>
+    
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/loadmap.js"></script>
+    <script type="text/javascript" src="js/side.js"></script> 
+  </body>  
+  
 </html>
