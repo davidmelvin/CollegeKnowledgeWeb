@@ -6,25 +6,44 @@ html, body, #map-canvas {
   }
 #map-canvas{
 
-  width: 80%;
+  width: 69.5%;
   float:left;
 }
 #sidebar{
-  width: 20%;
+  width: 30%;
   float:right;
+  border-left: 5px black dotted;
+  padding-bottom: 500px;
 }
 
 #searchPanel{
 position: absolute;
 top: 5px;
-left: 50%;
+left: 25%;
 margin-left: -180px;
 z-index: 5;
 background-color: #fff;
 padding: 5px;
 border: 1px solid #999;
 }
+
 h2{
 
   font-size: 1.4rem;
+  text-decoration: underline;
+  margin-bottom: 1px;
+  margin-top: 20px;
+  margin-left: 10px;
+
+}
+
+p {
+	margin-bottom: 1px;
+	margin-top: 1px;
+	margin-left: 10px;
+}
+
+a {
+	margin-left: 10px;
+
 }
