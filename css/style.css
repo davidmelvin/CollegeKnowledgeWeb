@@ -1,20 +1,30 @@
 html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 
-      }
-      #map-canvas{
+  }
+#map-canvas{
 
-        width: 80%;
-      }
+  width: 80%;
+  float:left;
+}
+#sidebar{
+  width: 20%;
+  float:right;
+}
+
 #searchPanel{
-     position: absolute;
-        top: 5px;
-        left: 50%;
-        margin-left: -180px;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
+position: absolute;
+top: 5px;
+left: 50%;
+margin-left: -180px;
+z-index: 5;
+background-color: #fff;
+padding: 5px;
+border: 1px solid #999;
+}
+h2{
+
+  font-size: 1.4rem;
 }
