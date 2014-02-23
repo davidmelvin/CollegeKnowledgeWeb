@@ -1,5 +1,6 @@
  var geocoder;
 var map;
+var circle;
 var locations = [
   ['The College of New Jersey',40.268835,-74.78091,0.46,7270,14378,550,650,580,680,560,670,0.43,0.8,0.72,0.94],
   ['Rider University',40.279189,-74.732546,0.72,5485,33420,420,500,400,520,420,510,0.51,0.6,0.88,0.98],
@@ -8,7 +9,6 @@ var locations = [
 ];
 function initialize() {
   geocoder = new google.maps.Geocoder();
-
   /*
   var query=window.location.search.substring(1);
   console.log(query);
@@ -29,6 +29,15 @@ var mapOptions = {
 };
  map = new google.maps.Map(document.getElementById("map-canvas"),
     mapOptions);
+
+ var circleOptions = {
+      fillOpacity:0,
+      strokeOpacity:0,
+      map:map,
+      radius:15
+   }
+
+   circle = new google.maps.Circle(circleOptions);
    /*var marker, i;
   for (i = 0; i < locations.length; i++) {  
          marker = new google.maps.Marker({
@@ -41,27 +50,35 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 function zoomOnLocation() {
     var address = document.getElementById("address").value;
+    var radius = document.getElementById("radius").value;
    // var address = "2000 Pennington Rd Ewing Township, NJ";
    var myLatlng= [];
    for ( x = 0; x < locations.length; x++){
        myLatlng[x] = new google.maps.LatLng(locations[x][1],locations [x][2]);
    }
    
+   
     
     console.log("lat:" + locations[0][1]);
     console.log("ong:" + locations [0][2]);
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
+        circle.setCenter(results[0].geometry.location);
+        circle.setRadius(parseFloat(radius)*804.5);
         map.setCenter(results[0].geometry.location);
-        map.setZoom(12);
+        map.fitBounds(circle.getBounds());
+        //map.setZoom(parseFloat(radius));
+        
 
         var marker, m, c;
         for (a = 0; a < locations.length; a++){
-           marker = new google.maps.Marker({
-            map: map,
-            position: myLatlng[a]
-            //position:  google.maps.LatLng(40.268835,-74.78091)
-        });
+            //if(google.maps.geometry.spherical.computeDistanceBetween(myLatlng[a], results[0].geometry.location) <= parseFloat(radius)){
+              marker = new google.maps.Marker({
+              map: map,
+              position: myLatlng[a]
+              //position:  google.maps.LatLng(40.268835,-74.78091)
+              });
+            //}
 
         }
         
