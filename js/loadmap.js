@@ -39,7 +39,7 @@ var mapOptions = {
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-function codeAddress() {
+function zoomOnLocation() {
     var address = document.getElementById("address").value;
    // var address = "2000 Pennington Rd Ewing Township, NJ";
    var myLatlng= [];
